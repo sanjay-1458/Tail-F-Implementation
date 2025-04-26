@@ -1,5 +1,6 @@
 # Overview
-The tail command, prints the last N number of data of the given input. By default, it prints the last 10 lines of the specified files. If more than one file name is provided then data from each file is preceded by its file name.
+The tail command, prints the last N number of data of the given input. By default, it prints the last 10 lines of the specified files. If more than one file name is provided then data from each file is preceded by its file name.<br>
+If you want the practical example, open the bash inside a folder and for any file run command `tail fileName`
 
 # Project Structure
  ## 📄 index.html

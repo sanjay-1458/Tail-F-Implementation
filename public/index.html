@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+    <h2>Log</h2>
+    <div id="log"></div>
+    <script>
+        const log=document.getElementById('log');
+        const socket=io('http://localhost:3000');
+        socket.on('initLog',(lines)=>{
+            lines.forEach(line=>appendLine(line));
+        })
+        socket.on('logLine',(line)=>{
+            appendLine(line);
+        })
+        function appendLine(line){
+            const p=document.createElement('p');
+            p.innerText=line;
+            log.appendChild(p);
+        }
+    </script>
+</body>
+</html>
